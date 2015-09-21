@@ -1,20 +1,26 @@
+ Bacteria[] bobbies = new Bacteria[5];
  void setup()   
  {    
  	size(500,500);
  	frameRate(20);
  	noStroke();
+ 	for (int i = 0; i < bobbies.length; i ++)
+ 	{
+ 	 bobbies[i] = new Bacteria();
+ 		
+ 	}
  	//initialize bacteria variables here   
  }   
  void draw()   
  {    
  	//move and show the bacteria   
  	background(133,199,255);
- 	Bacteria [] bobbies;
- 	for (int i = 0; i <= bobbies.length; i ++)
+ 	
+ 	for (int i = 0; i < bobbies.length; i ++)
  	{
- 		Bacteria bob = new Bacteria();
- 		bob.move();
- 		bob.show();
+ 
+ 		bobbies[i].move();
+ 		bobbies[i].show();
  	}
  	
  }  
