@@ -1,4 +1,4 @@
- Bacteria[] bobbies = new Bacteria[5];
+ Bacteria[] bobbies = new Bacteria[10];
  void setup()   
  {    
  	size(500,500);
@@ -33,15 +33,16 @@
  	{
  		bacX = 250;
 		bacY = 250;
- 		fill(0,127,118);	
+ 			
  	}
  	void move()
  	{
-		bacX = bacX + (int)(Math.random() * range + 1) - range/2;
- 		bacY = bacY + (int)(Math.random() * range + 1) - range/2;
+		bacX = bacX + (int)(Math.random() * range ) - (range - 3);
+ 		bacY = bacY + (int)(Math.random() * range ) - (range - 3);
  	}
  	void show()
  	{
+ 		fill(0,127,118);
 		ellipse(bacX, bacY, 18,18);
  	}
  	
